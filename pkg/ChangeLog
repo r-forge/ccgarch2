@@ -1,5 +1,0 @@
-2013-01-14 changes in ver 0.0.0-1 
-   * the first private release.
-2013-12-04
-  * optimization routine is changed from optim() to solnp() in Rsolnp package.
-  * some functions are converted into C.

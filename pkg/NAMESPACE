@@ -1,0 +1,54 @@
+useDynLib(ccgarch2, 
+dcc_est,
+cdcc_est,
+vector_garch,
+dcc_ll2  
+)
+
+export(
+"simulateCDCC",
+"estimateCDCC",
+"simulateDCC",
+"estimateDCC",
+"simulateCCC",
+"estimateCCC",
+"jb.test",
+"lb.test",
+"residDiag"
+)
+
+import(MASS)
+import(numDeriv)
+import(zoo)
+import(Ecdat)
+import(Rsolnp)
+
+S3method(print, cdcc)
+S3method(print, summary.cdcc)
+S3method(summary, cdcc)
+S3method(plot, cdcc)
+S3method(plot, summary.cdcc)
+S3method(logLik, cdcc)
+
+S3method(print, dcc)
+S3method(print, summary.dcc)
+S3method(summary, dcc)
+S3method(plot, dcc)
+S3method(plot, summary.dcc)
+S3method(logLik, dcc)
+
+S3method(print, ccc)
+S3method(print, summary.ccc)
+S3method(summary, ccc)
+S3method(plot, ccc)
+S3method(plot, summary.ccc)
+S3method(logLik, ccc)
+
+S3method(print, jbtest)
+S3method(print, lbtest)
+
+S3method(print, residDiag)
+# S3method(summary, residDiag)
+
+
+

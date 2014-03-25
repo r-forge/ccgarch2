@@ -106,7 +106,7 @@ estimateCCC <- function(inia = NULL, iniA = NULL, iniB = NULL, data, model="diag
         )
       ), 
       error = function(e) conditionMessage(e), 
-      finally=print("Bad initial values. Try again without initial values.")
+      finally=cat("Bad initial values. Try again without initial values.")
     )
   } else { # when initial values are not supplied
     cat("Initial values are not supplied. Random values are used.")

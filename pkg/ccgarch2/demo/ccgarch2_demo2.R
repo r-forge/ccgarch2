@@ -25,7 +25,8 @@ ini.B <- diag(rep(0.8, 4))
 
 
 # Constant Conditional Correlation
-exr.ccc <- estimateCCC(data = r, model="extended")
+# exr.ccc <- estimateCCC(ini.a, ini.A, ini.B, data = r, model="extended")
+exr.ccc <- estimateCCC(ini.a, ini.A, ini.B, data = r, model="extended")
 out.ccc <- summary(exr.ccc)
 
 # Dynamic Conditional Correlation

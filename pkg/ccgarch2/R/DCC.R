@@ -23,10 +23,6 @@ dcc.est <- function(data, param){
    uncR <- cov(data)
    out <- .Call("dcc_est", data, uncR, param[1], param[2])
    list(DCC=out[[1]], Q=out[[2]])
-#  nobs <- nrow(data)
-#  ndim <- ncol(data)
-#  uncR1 <- cov(data)*((nobs-1)/nobs)    
-#  Q1 <- uncR1         # initial value of Q0
 ###########################################################  
 #  zz1 <- colMeans(data)        # initial value of zz0
 #  zz1 <- zz1%o%zz1

@@ -77,10 +77,10 @@ estimateDCC <- function(inia = NULL, iniA = NULL, iniB = NULL, ini.dcc = NULL, d
    data <- as.matrix(data)
 
    if(!is.null(inia) & !is.null(iniA) & !is.null(iniB)){ # when the initial values are supplied
-     tryCatch(first.stage <- dcc1.estimation(data=data, a=inia, A=iniA, B=iniB, 
+      tryCatch(first.stage <- dcc1.estimation(data=data, a=inia, A=iniA, B=iniB, 
                                              model=model), 
-              error = function(e) conditionMessage(e), 
-              finally=cat("Bad initial values. Try again without initial values.")
+      error = function(e) conditionMessage(e), 
+      finally=cat("Bad initial values. Try again without initial values.")
      )
    } else { # when initial values are not supplied
      cat("Initial values are not supplied. Random values are used.")

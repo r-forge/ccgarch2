@@ -11,6 +11,8 @@ loglik.ccc.t <- function(param, data, model, mode){
   # check if R is positive definite. If not, making R positive definite
   R <- make.pd(para.mat$R)
 
+  
+  
   h <- vgarch(para.mat$a, para.mat$A, para.mat$B, data)    # a call to vgarch function
   z <- data/sqrt(h)
   invR <- solve(R)

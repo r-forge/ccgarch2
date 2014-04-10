@@ -122,7 +122,7 @@ estimateCCC <- function(inia = NULL, iniA = NULL, iniB = NULL, data, model="diag
         while(ret > 1){
           ub <- runif(ndim, min=0.0001, max=0.04)
           iniA <- matrix(runif(ndim^2, min=0, max=ub[sample(1:ndim, 1)]), ndim, ndim)
-          iniB <- matrix(runif(ndim^2, min=-0.004, max=ub[sample(1:ndim, 1)]), ndim, ndim)
+          iniB <- matrix(runif(ndim^2, min=-0.04, max=ub[sample(1:ndim, 1)]), ndim, ndim)
           diag(iniA) <- round(runif(ndim, min=0.04, max=0.05), 4)
           diag(iniB) <- round(runif(ndim, min=0.8, max=0.9), 4)
           init <- c(mu, inia, as.vector(iniA), as.vector(iniB), R[lower.tri(R)])

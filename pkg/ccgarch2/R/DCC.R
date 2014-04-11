@@ -208,8 +208,6 @@ summary.dcc <- function(object, ...){
   H <- hessian(func = loglik1.dcc.t, x=c(object$mu, object$garch.par), 
                 data=object$data, model=object$model, mode="hessian", method.args=list(eps=1e-5, d=1e-5))
 
-
-
   # computing standard errors for the DCC part
   object$Dcc.par <- object$s.stage$par             # estimates for the DCC
   names(object$Dcc.par) <- c("alpha", "beta")
@@ -228,7 +226,6 @@ summary.dcc <- function(object, ...){
   # g.dcc <- optimHess(all.par, fn=dcc.hessian, data=object$data, model=object$model)  # this is time consuming!!!
   g.dcc <- hessian(func = dcc.hessian, x = all.par, data=object$data, 
                     model=object$model, method.args=list(eps=1e-5, d=1e-5))
-
 
   npar <- length(all.par)       # the number of total parameters
   
@@ -300,4 +297,3 @@ print.dcc <- function(x, ...){
   #print.default(format(x$f.stage$par, digits = 4), print.gap = 1, quote = FALSE)
   invisible(x)
 }
-

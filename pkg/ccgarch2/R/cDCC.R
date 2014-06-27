@@ -448,7 +448,7 @@ print.summary.cdcc <- function(x, digits = max(3, getOption("digits") - 1), ...)
   cat("Conditional variance equation:", x$model, "\n")
   
   cat("\nCoefficients:", "\n")
-  printCoefmat(x$coef, digits = 2, dig.tst = 4)    # printCoefmat() is defined in stats package
+  printCoefmat(x$coef, digits =4, dig.tst = 4)    # printCoefmat() is defined in stats package
   
   cat("\nNumber of Obs.:", formatC(x$nobs, digits = 0), "\n")
   cat("Log-likelihood:", formatC(x$logLik, format="f", digits = 5), "\n\n")

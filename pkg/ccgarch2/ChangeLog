@@ -1,5 +1,7 @@
+2014-6-27 ver 0.0.0-38
+  * first publicly available version at R-Forge.
 2014-2-22 ver 0.0.0-32
-  * first submission to R-Forge
+  * first submission to R-Forge.
 2013-12-04
   * optimization routine is changed from optim() to solnp() in Rsolnp package.
   * some functions are converted into C.

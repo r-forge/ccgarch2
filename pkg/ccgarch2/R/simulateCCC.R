@@ -38,7 +38,7 @@ simulateCCC <- function(R, a0, A, B, nobs, ncut=1000){
   colnames(h) <- paste("Series", name.id, sep="")
   colnames(eps) <- paste("Series", name.id, sep="")
   
-  list(z=z[-(1:ncut), ], h=h[-(1:ncut), ], eps=eps[-(1:ncut), ])
+  list(z=zoo(z[-(1:ncut), ]), h=zoo(h[-(1:ncut), ]), eps=zoo(eps[-(1:ncut), ]))
 }
 
 ###################################################################
@@ -81,5 +81,5 @@ simulateCCC.lev <- function(R, a0, A, B, Lev, nobs, ncut=1000){
   colnames(h) <- paste("Series", name.id, sep="")
   colnames(eps) <- paste("Series", name.id, sep="")
   
-  list(z=z[-(1:ncut), ], h=h[-(1:ncut), ], eps=eps[-(1:ncut), ])
+  list(z=zoo(z[-(1:ncut), ]), h=zoo(h[-(1:ncut), ]), eps=zoo(eps[-(1:ncut), ]))
 }

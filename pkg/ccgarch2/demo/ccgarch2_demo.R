@@ -34,6 +34,8 @@ out.dcc <- summary(exr.dcc)
 exr.cdcc <- estimateCDCC(data = r[, 1:2], model="extended")
 out.cdcc <- summary(exr.cdcc)
 
+
+
 abc <- residDiag(out.dcc)
 
 tx1 <- cbind(abc$lb$stat[,1], abc$lb$p.val[,1])

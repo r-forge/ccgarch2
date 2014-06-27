@@ -59,7 +59,7 @@ simulateCDCC <- function(a, b, Q, a0, A, B, nobs, ncut=1000){
   colnames(h) <- paste("Series", name.id, sep="")
   colnames(eps) <- paste("Series", name.id, sep="")
   
-  list(CDCC=DCC[-(1:ncut), ], z=z[-(1:ncut), ], Q=vecQ2[-(1:ncut), ], h=h[-(1:ncut), ], eps=eps[-(1:ncut), ])
+  list(CDCC=zoo(DCC[-(1:ncut), ]), z=zoo(z[-(1:ncut), ]), Q=zoo(vecQ2[-(1:ncut), ]), h=zoo(h[-(1:ncut), ]), eps=zoo(eps[-(1:ncut), ]))
 }
 
 ###################################################################
@@ -123,5 +123,6 @@ simulateCDCC.lev <- function(a, b, Q, a0, A, B, Lev, nobs, ncut=1000){
   colnames(h) <- paste("Series", name.id, sep="")
   colnames(eps) <- paste("Series", name.id, sep="")
   
-  list(CDCC=DCC[-(1:ncut), ], z=z[-(1:ncut), ], Q=vecQ2[-(1:ncut), ], h=h[-(1:ncut), ], eps=eps[-(1:ncut), ])
+#  list(CDCC=DCC[-(1:ncut), ], z=z[-(1:ncut), ], Q=vecQ2[-(1:ncut), ], h=h[-(1:ncut), ], eps=eps[-(1:ncut), ])
+  list(CDCC=zoo(DCC[-(1:ncut), ]), z=zoo(z[-(1:ncut), ]), Q=zoo(vecQ2[-(1:ncut), ]), h=zoo(h[-(1:ncut), ]), eps=zoo(eps[-(1:ncut), ]))
 }

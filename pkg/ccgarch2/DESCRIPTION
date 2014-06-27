@@ -1,5 +1,5 @@
 Package: ccgarch2
-Version: 0.0.0-37
+Version: 0.0.0-38
 Date: 2014-06-27
 Title: Conditional Correlation GARCH Models
 Authors@R: c( person("Tomoaki", "Nakatani", role = c("aut", "cre",

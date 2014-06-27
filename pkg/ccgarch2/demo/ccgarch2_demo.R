@@ -33,7 +33,7 @@ out.dcc <- summary(exr.dcc)
 # Corrected Dynamic Conditional Correlation
 exr.cdcc <- estimateCDCC(data = r[, 1:2], model="extended")
 out.cdcc <- summary(exr.cdcc)
-
+out.cdcc
 
 
 abc <- residDiag(out.dcc)

@@ -1,5 +1,5 @@
 lb.test <- function(obj, ...){
-    if(is.vector(obj)) stop("obj is a vector. Use `Box.test()'.")
+    if(is.null(dim(obj)) stop("obj is a vector. Use `Box.test()'.")
     ndim <- ncol(obj)
     lags <- c(1, seq(5, 50, 5))
     nlag <- length(lags)

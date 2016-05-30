@@ -58,8 +58,9 @@ SEXP cdcc_est(SEXP z, SEXP R, SEXP dcca, SEXP dccb){
   for(j=0; j<ndim; j++){
       rz_lag[j] = 0.0;
     for(i=0; i<nobs; i++){
-      rz_lag[j] += rz_[i + j*nobs]/nobs ;   
+      rz_lag[j] += rz_[i + j*nobs];   
     }
+    rz_lag[j] = rz_lag[j]/nobs ;
   }
 
   /* assigning parameters to Qbar matrix and initial values */

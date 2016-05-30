@@ -37,9 +37,11 @@ SEXP vector_garch(SEXP res, SEXP a0, SEXP Arch, SEXP Garch)
   /* initial values = the average of eps^2 */
   for(j=0; j<ndim; j++){
     for(i=0; i<nobs; i++){
-      rx1[j] += rx[i + j*nobs]/nobs ;   /* eps_{0}^2*/
-      rx2[j] += rx[i + j*nobs]/nobs ;   /* h_{0} */
+      rx1[j] += rx[i + j*nobs];
+      rx2[j] += rx[i + j*nobs];
     }
+    rx1[j] = rx1[j]/nobs;   /* eps_{0}^2*/
+    rx2[j] = rx2[j]/nobs;   /* h_{0} */
   }
   
   /* recursion from T=1 to the end */

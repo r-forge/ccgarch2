@@ -1,7 +1,10 @@
+2016-05-30
+  * fixed handling zoo objects in jb.test.
+  * some minor changes in C codes.
 2015-03-02
-  * fixed handling zoo objects in lb.test
+  * fixed handling zoo objects in lb.test.
 2014-6-28
-  * Makevars and Makevars.win are added agein
+  * Makevars and Makevars.win are added agein.
 2014-6-27 ver 0.0.0-38
   * first publicly available version at R-Forge.
 2014-2-22 ver 0.0.0-32

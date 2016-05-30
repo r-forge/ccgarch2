@@ -1,7 +1,7 @@
 # residual diagnostics
 residDiag <- function(object){
 
-    if(class(object) != "ccc" & class(object) != "cdcc" & class(object) != "dcc" & 
+    if(class(object) != "ccc" & class(object) != "cdcc" & class(object) != "dcc" & class(object) != "zoo" & 
        class(object) != "summary.ccc" & class(object) != "summary.cdcc" & class(object) != "summary.dcc"){
         # stop if the object is not an appropreate class
         stop("the object must be 'ccc', 'dcc' or 'cdcc' class")

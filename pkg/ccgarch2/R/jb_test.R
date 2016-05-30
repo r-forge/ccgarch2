@@ -1,6 +1,7 @@
 # Lomnicki(1961)-Jarque-Bera (1987) test of normality
 jb.test <- function(obj, ...){
   x <- obj
+  if(is.zoo(obj))  x<- as.matrix(x)
   if(!is.vector(x)){
     nobs <- nrow(x)
     ndim <- ncol(x)

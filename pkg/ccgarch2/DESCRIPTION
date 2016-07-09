@@ -1,9 +1,9 @@
 Package: ccgarch2
-Version: 0.0.0-41
-Date: 2016-05-30
+Version: 0.0.0-42
+Date: 2016-07-09
 Title: Conditional Correlation GARCH Models
 Authors@R: c( person("Tomoaki", "Nakatani", role = c("aut", "cre",
         "cph"), email = "naktom2@gmail.com"))
 Depends: R (>= 3.0), MASS, numDeriv, zoo, Ecdat, Rsolnp
-Description: Functionalities for estimating Conditional Correlation GARCH models
+Description: This package provides unctionalities for estimating Conditional Correlation GARCH models.
 License: GPL (>= 2)
